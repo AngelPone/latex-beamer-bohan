@@ -9,9 +9,11 @@
 }
 
 \usepackage{booktabs}
+
 \usepackage{outlines}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \beamertemplatenavigationsymbolsempty
 
 \AtBeginSection[]{
@@ -19,6 +21,16 @@
   \tableofcontents[currentsection, hideothersubsections]
   \end{frame}
 }
+
+
+%% make cell
+\usepackage{makecell}
+\renewcommand\theadalign{l}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[1pt]}
+\renewcommand\cellgape{\Gape[3pt]}
+
+%%
 
 % color
 \definecolor{coreFontMain}{RGB}{26,26,26}
@@ -144,3 +156,7 @@
 \setbeamercolor{itemize item}{fg=coreFontMain}
 \setbeamercolor{itemize subitem}{fg=coreFontMain}
 \setbeamercolor{itemize subsubitem}{fg=coreFontMain}
+
+
+
+% some useful commands

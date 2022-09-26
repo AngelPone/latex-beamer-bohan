@@ -38,6 +38,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-shell-escape",
+                "-bibtex",
                 "-xelatex",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
@@ -101,5 +102,13 @@
             "env": {}
         }
     ],
-    "latex-workshop.latex.recipe.default": "first"
+    "latex-workshop.latex.recipe.default": "first",
+    "editor.tabSize": 2,
+    "[latex]": {
+        "editor.tabSize": 2
+    },
+    "[tex]": {
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced"
+    },
 }
