@@ -1,15 +1,29 @@
-\usepackage{tikz}
 \usepackage{xcolor}
 \usepackage{layouts}
+\usepackage{minted}
 \usepackage[most]{tcolorbox}
+\tcbuselibrary{minted}
+\usemintedstyle{xcode}
+\setminted{
+    fontfamily=helvetica
+}
+
+\usepackage{booktabs}
 \usepackage{outlines}
+\usepackage{hyperref}
+\usepackage{graphicx}
 \beamertemplatenavigationsymbolsempty
 
+\AtBeginSection[]{
+  \begin{frame}
+  \tableofcontents[currentsection, hideothersubsections]
+  \end{frame}
+}
 
 % color
 \definecolor{coreFontMain}{RGB}{26,26,26}
 \definecolor{coreFontSub}{RGB}{106,106,106}
-\definecolor{corelightGray}{RGB}{230,230,230}
+\definecolor{coreBackgroundLight}{RGB}{230,230,230}
 \definecolor{coreBackground}{RGB}{255,255,255}
 
 % heading
@@ -34,7 +48,7 @@
 % footer
 \newlength{\footerheight}
 \setlength{\footerheight}{0.04\paperheight}
-\setbeamercolor{footer}{bg=corelightGray, fg=coreFontMain}
+\setbeamercolor{footer}{bg=coreBackgroundLight, fg=coreFontMain}
 
 \setbeamertemplate{footline}
 {%
@@ -50,9 +64,14 @@
 
 % Title Page
 
+% header
+\newlength{\titleheaderheight}
+\setlength{\titleheaderheight}{0.0666667\paperheight}
+\setbeamercolor{header}{bg=coreBackgroundLight}
+
 %% logo
 \newlength{\logoheight}
-\setlength{\logoheight}{0.296\paperheight}
+\setlength{\logoheight}{0.297\paperheight}
 
 %% title
 \setbeamercolor{title}{fg=coreFontMain}
@@ -75,7 +94,7 @@
 
 \setbeamertemplate{title page}{
 \nointerlineskip
-\begin{beamercolorbox}[wd=\paperwidth,ht=\headerheight]{header}
+\begin{beamercolorbox}[wd=\paperwidth,ht=\titleheaderheight]{header}
 \end{beamercolorbox}
 \nointerlineskip
 \begin{beamercolorbox}[wd=\paperwidth,ht=\logoheight]{}
@@ -99,7 +118,7 @@
 
 \begin{tcolorbox}[enhanced,frame hidden, colback=coreBackground,height=\contactheight,notitle,halign=flush center,valign=top,before skip=0pt,after skip=0pt,top=-5pt]
 \begin{tabular}{ccc}
-\includegraphics[height=3mm]{figures/mail.png} & \includegraphics[height=3mm]{figures/github.png} &\includegraphics[height=3mm]{figures/Twitter.png}
+\includegraphics[height=3mm]{bohanbeamerstyle/figures/mail.png} & \includegraphics[height=3mm]{bohanbeamerstyle/figures/github.png} &\includegraphics[height=3mm]{bohanbeamerstyle/figures/Twitter.png}
 \end{tabular}
 
 \end{tcolorbox}
